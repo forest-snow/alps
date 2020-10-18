@@ -72,7 +72,7 @@ This will output a CSV file in `analysis` folder containing uncertainty and dive
   title={Cold-start Active Learning through Self-supervised Language Modeling},
   author={Yuan, Michelle and Lin, Hsuan-Tien and Boyd-Graber, Jordan},
   booktitle={Empirical Methods in Natural Language Processing},
-  year={2018}
+  year={2020}
 }
 ```
 
