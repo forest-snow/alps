@@ -78,7 +78,7 @@ def get_stats(model_path, base_model, dataset):
 
 
 
-TASKNAME = {'sst-2':'SST-2', 'cola':'CoLA'}
+TASKNAME = {'sst-2':'SST-2'}
 parser = argparse.ArgumentParser()
 parser.add_argument(
     "--task_models",
