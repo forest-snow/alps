@@ -1,5 +1,5 @@
 # ALPS
-Code repository for EMNLP 2020 proceedings paper "(Cold-start Active Learning through Self-supervised Language Modeling)[https://arxiv.org/abs/2010.09535]".  The main contribution of the paper is an active learning algorithm called ALPS (Active Learning through Processing Surprisal) that is based on the language modeling objective.  
+Code repository for EMNLP 2020 proceedings paper [Cold-start Active Learning through Self-supervised Language Modeling](https://arxiv.org/abs/2010.09535).  The main contribution of the paper is an active learning algorithm called ALPS (Active Learning through Processing Surprisal) that is based on the language modeling objective.  
 
 # Installation
 1. Create virtual environment with Python 3.7+
