@@ -47,7 +47,7 @@ So, whenever you want to use ALPS, you would pass in `alps` as input to the comm
 For active learning strategies that DO NOT require a model already fine-tuned on downstream task (`rand`, `alps`, and `bertKM`), you set variable `SAMPLING`to the strategy's name and variable `COLDSTART` to `none`.  This will use method specified in`SAMPLING` to sample data on each iteration.
 
 ### Warm-starting required
-For active learning strategies that DO require a model already fine-tuned on downstream task (`rand`, `alps`, and `bertKM`), you set variable `SAMPLING`to the strategy's name and variable `COLDSTART` to the method used for sampling data in the first iteration.  For instance, max. entropy sampling would have `SAMPLING` set to `entropy` and `COLDSTART` set to `rand`.  
+For active learning strategies that DO require a model already fine-tuned on downstream task (`badge`, `entropy`, and `FTbertKM`), you set variable `SAMPLING`to the strategy's name and variable `COLDSTART` to the method used for sampling data in the first iteration.  For instance, max. entropy sampling would have `SAMPLING` set to `entropy` and `COLDSTART` set to `rand`.  
 
 **NOTE:** you must run simulation for method specified in `COLDSTART` for at least one iteration. For example, run `rand`for 1 iteration before running simulations for`entropy`.
 
