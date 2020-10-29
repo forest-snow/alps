@@ -65,7 +65,7 @@ To set the size of data sampled on each iteration, configure the variable `INCRE
 ## Test fine-tuned models
 To test models that have been fine-tuned, run
 
-python -m src.test --models models
+`python -m src.test --models models`
 
 This will iterate through every model located in subdirectories of folder `models` and evaluate them on the test dataset.  However, it will skip over any models that are just checkpoints or were not evaluated on a dev set (models trained with scripts will automatically be tested on dev set).  The script will output results in `test_results.txt`
 
