@@ -22,12 +22,20 @@ The repository is organized as the following subfolders:
 All commands below should be ran in the top-level directory `alps`.
 
 ## Fine-tune model on full training dataset
-To simply fine-tune a model on the full training dataset, run `bash scripts/train.sh`.  After fine-tuning, this model will be saved under a subdirectory called `base` in `models` directory.  Results on dev set will be saved in `eval_results.txt`.
+To simply fine-tune a model on the full training dataset, run 
+
+`bash scripts/train.sh`  
+
+After fine-tuning, this model will be saved under a subdirectory called `base` in `models` directory.  Results on dev set will be saved in `eval_results.txt`.
 
 You may modify the parameters (like model type, task, seed, etc.) in `scripts/train.sh`by configuring the variables at the top of the script.  
 
 ## Run active learning simulations
-To simulate active learning, run `bash scripts/active_train.sh`.  This script will sample data for a fixed number of iterations and then fine-tune the model on the sampled data for each iteration.  The fine-tuned model will be saved under a subdirectory called `{strategy}_{size}` where `strategy` is the active learning strategy used to sample data and `size` is the number of examples used to fine-tune the model.  Results on dev set will be saved in `eval_results.txt`.
+To simulate active learning, run 
+
+`bash scripts/active_train.sh` 
+
+This script will sample data for a fixed number of iterations and then fine-tune the model on the sampled data for each iteration.  The fine-tuned model will be saved under a subdirectory called `{strategy}_{size}` where `strategy` is the active learning strategy used to sample data and `size` is the number of examples used to fine-tune the model.  Results on dev set will be saved in `eval_results.txt`.
 
 To modify parameters in `scripts/active_train.sh`, you can configure the variables at the top of the script.  Please read the instructions below for more information.
 
@@ -56,13 +64,15 @@ To set the size of data sampled on each iteration, configure the variable `INCRE
 
 ## Test fine-tuned models
 To test models that have been fine-tuned, run
-```
+
 python -m src.test --models models
-```
+
 This will iterate through every model located in subdirectories of folder `models` and evaluate them on the test dataset.  However, it will skip over any models that are just checkpoints or were not evaluated on a dev set (models trained with scripts will automatically be tested on dev set).  The script will output results in `test_results.txt`
 
 ## Analyze active learning sampled batches
-To analyze the uncertainty and diversity of batched sampled with active learning, run `bash scripts/analyze.sh`.
+To analyze the uncertainty and diversity of batched sampled with active learning, run 
+
+`bash scripts/analyze.sh`
 
 This will output a CSV file in `analysis` folder containing uncertainty and diversity scores for each sampled batch.  The header of the CSV file will be`sampling,iteration,task,diversity,uncertainty`.  Each row indicates the diversity and uncertainty scores for data sampled with strategy at a certain iteration for a task.
 
