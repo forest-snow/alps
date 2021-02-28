@@ -88,7 +88,7 @@ def main():
     if args.task_name not in processors:
         raise ValueError("Task not found: %s" % (args.task_name))
     # first, get already sampled points
-    sampled_file = os.path.join(args.output_dir, 'sampled.pt')
+    sampled_file = os.path.join(args.model_name_or_path, 'sampled.pt')
     if os.path.isfile(sampled_file):
         sampled = torch.load(sampled_file)
     else:
